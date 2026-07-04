@@ -1,82 +1,167 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="800" height="240" role="img" aria-labelledby="title desc">
-  <title id="title">KawaiiGPT</title>
-  <desc id="desc">A cute and badass AI</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900" role="img">
+  <title>OMEGA Knowledge Engine</title>
 
   <defs>
-    <linearGradient id="gPink" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#ffb3d9"/>
-      <stop offset="0.5" stop-color="#ff66b2"/>
-      <stop offset="1" stop-color="#ff4da6"/>
+    <radialGradient id="bg" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#07111c"/>
+      <stop offset="55%" stop-color="#02070d"/>
+      <stop offset="100%" stop-color="#000"/>
+    </radialGradient>
+
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fff3a3"/>
+      <stop offset="35%" stop-color="#f5b82e"/>
+      <stop offset="70%" stop-color="#b87912"/>
+      <stop offset="100%" stop-color="#ffdf72"/>
     </linearGradient>
 
-    <filter id="fShadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#ff9acb" flood-opacity="0.25"/>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
 
-    <symbol id="rain">
-      <rect x="0" y="0" width="2" height="20" rx="1" ry="1" fill="#ffb3d9" opacity="0.5"/>
+    <filter id="strongGlow">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <symbol id="bit">
+      <text font-family="monospace" font-size="20" fill="#16a9ff" opacity="0.55">101</text>
     </symbol>
   </defs>
 
-  <g>
-    <g>
-      <use href="#rain" x="50" y="10">
-        <animateTransform attributeName="transform" type="translate" from="0 0" to="0 240" dur="1.8s" repeatCount="indefinite"/>
-      </use>
-      <use href="#rain" x="120" y="40">
-        <animateTransform attributeName="transform" type="translate" from="0 0" to="0 240" dur="2.3s" begin="0.4s" repeatCount="indefinite"/>
-      </use>
-      <use href="#rain" x="200" y="60">
-        <animateTransform attributeName="transform" type="translate" from="0 0" to="0 240" dur="1.7s" begin="0.8s" repeatCount="indefinite"/>
-      </use>
-      <use href="#rain" x="280" y="30">
-        <animateTransform attributeName="transform" type="translate" from="0 0" to="0 240" dur="2.4s" begin="0.2s" repeatCount="indefinite"/>
-      </use>
-      <use href="#rain" x="340" y="90">
-        <animateTransform attributeName="transform" type="translate" from="0 0" to="0 240" dur="2.1s" begin="0.6s" repeatCount="indefinite"/>
-      </use>
-      <use href="#rain" x="420" y="120">
-        <animateTransform attributeName="transform" type="translate" from="0 0" to="0 240" dur="1.6s" begin="0.3s" repeatCount="indefinite"/>
-      </use>
-      <use href="#rain" x="500" y="10">
-        <animateTransform attributeName="transform" type="translate" from="0 0" to="0 240" dur="1.9s" begin="0.5s" repeatCount="indefinite"/>
-      </use>
-      <use href="#rain" x="580" y="60">
-        <animateTransform attributeName="transform" type="translate" from="0 0" to="0 240" dur="2.2s" begin="0.7s" repeatCount="indefinite"/>
-      </use>
-      <use href="#rain" x="660" y="90">
-        <animateTransform attributeName="transform" type="translate" from="0 0" to="0 240" dur="1.5s" begin="0.1s" repeatCount="indefinite"/>
-      </use>
-      <use href="#rain" x="740" y="30">
-        <animateTransform attributeName="transform" type="translate" from="0 0" to="0 240" dur="1.8s" begin="0.9s" repeatCount="indefinite"/>
-      </use>
-    </g>
-  </g>
+  <rect width="900" height="900" fill="url(#bg)"/>
 
-  <g transform="translate(60,160)" filter="url(#fShadow)">
-    <text x="0" y="0"
-      font-family="'Poppins','Comic Sans MS',cursive"
-      font-weight="800"
-      font-size="96"
-      letter-spacing="2"
-      fill="url(#gPink)"
-      stroke="#fff"
-      stroke-width="5"
-      stroke-linejoin="round"
-      paint-order="stroke">
-      KawaiiGPT
-      <animate attributeName="x" values="0;2;-2;1;0" dur="1.8s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="0;-1;1;-1;0" dur="2.2s" repeatCount="indefinite"/>
-      <animate attributeName="fill-opacity" values="1;0.9;1;0.95;1" dur="2.5s" repeatCount="indefinite"/>
-    </text>
-  </g>
-
-  <circle cx="720" cy="60" r="4" fill="#fff6">
-    <animate attributeName="r" values="4;7;4" dur="1.8s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.5;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+  <!-- Outer badge -->
+  <circle cx="450" cy="450" r="430" fill="none" stroke="url(#gold)" stroke-width="3" opacity="0.9"/>
+  <circle cx="450" cy="450" r="390" fill="none" stroke="#1b6ea8" stroke-width="1" opacity="0.35"/>
+  <circle cx="450" cy="450" r="330" fill="none" stroke="url(#gold)" stroke-width="2" opacity="0.45">
+    <animateTransform attributeName="transform" type="rotate" from="0 450 450" to="360 450 450" dur="30s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="100" cy="100" r="3" fill="#fff6">
-    <animate attributeName="r" values="3;6;3" dur="2.2s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite"/>
+
+  <!-- Binary rain -->
+  <g opacity="0.8">
+    <use href="#bit" x="135" y="130">
+      <animateTransform attributeName="transform" type="translate" from="0 -80" to="0 700" dur="5s" repeatCount="indefinite"/>
+    </use>
+    <use href="#bit" x="710" y="150">
+      <animateTransform attributeName="transform" type="translate" from="0 -100" to="0 700" dur="6s" repeatCount="indefinite"/>
+    </use>
+    <use href="#bit" x="180" y="420">
+      <animateTransform attributeName="transform" type="translate" from="0 -80" to="0 500" dur="4.5s" repeatCount="indefinite"/>
+    </use>
+    <use href="#bit" x="690" y="430">
+      <animateTransform attributeName="transform" type="translate" from="0 -80" to="0 500" dur="5.5s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- Circuit lines -->
+  <g stroke="url(#gold)" stroke-width="2" fill="none" opacity="0.85" filter="url(#glow)">
+    <path d="M80 360 H210 L240 390 H310"/>
+    <path d="M80 410 H230 L255 435 H320"/>
+    <path d="M820 360 H690 L660 390 H590"/>
+    <path d="M820 410 H670 L645 435 H580"/>
+    <circle cx="240" cy="390" r="6" fill="#f5b82e"/>
+    <circle cx="255" cy="435" r="6" fill="#f5b82e"/>
+    <circle cx="660" cy="390" r="6" fill="#f5b82e"/>
+    <circle cx="645" cy="435" r="6" fill="#f5b82e"/>
+  </g>
+
+  <!-- Omega symbol -->
+  <g filter="url(#strongGlow)">
+    <path d="
+      M320 540
+      H225
+      V485
+      H260
+      C245 450 238 415 238 370
+      C238 250 330 160 450 160
+      C570 160 662 250 662 370
+      C662 415 655 450 640 485
+      H675
+      V540
+      H580
+      L600 480
+      C620 440 630 405 630 370
+      C630 270 555 195 450 195
+      C345 195 270 270 270 370
+      C270 405 280 440 300 480
+      Z"
+      fill="url(#gold)"
+      stroke="#fff4b8"
+      stroke-width="3">
+      <animate attributeName="opacity" values="0.9;1;0.92;1" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Knowledge graph -->
+  <g transform="translate(450 365)" filter="url(#glow)">
+    <g stroke="#ffd76b" stroke-width="1.4" opacity="0.85">
+      <line x1="0" y1="-120" x2="95" y2="-65"/>
+      <line x1="95" y1="-65" x2="95" y2="65"/>
+      <line x1="95" y1="65" x2="0" y2="120"/>
+      <line x1="0" y1="120" x2="-95" y2="65"/>
+      <line x1="-95" y1="65" x2="-95" y2="-65"/>
+      <line x1="-95" y1="-65" x2="0" y2="-120"/>
+      <line x1="0" y1="-120" x2="0" y2="120"/>
+      <line x1="-120" y1="0" x2="120" y2="0"/>
+      <line x1="-95" y1="-65" x2="95" y2="65"/>
+      <line x1="95" y1="-65" x2="-95" y2="65"/>
+    </g>
+
+    <g fill="url(#gold)" stroke="#fff4b8" stroke-width="2">
+      <circle cx="0" cy="-120" r="10"/>
+      <circle cx="95" cy="-65" r="10"/>
+      <circle cx="95" cy="65" r="10"/>
+      <circle cx="0" cy="120" r="10"/>
+      <circle cx="-95" cy="65" r="10"/>
+      <circle cx="-95" cy="-65" r="10"/>
+      <circle cx="0" cy="0" r="18" filter="url(#strongGlow)">
+        <animate attributeName="r" values="16;23;16" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-120" cy="0" r="8"/>
+      <circle cx="120" cy="0" r="8"/>
+    </g>
+
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="45s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <!-- Main text -->
+  <text x="450" y="675" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="92"
+        font-weight="700"
+        letter-spacing="18"
+        fill="#f7f7f7">
+    OMEGA
+  </text>
+
+  <text x="450" y="745" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="30"
+        font-weight="600"
+        letter-spacing="12"
+        fill="url(#gold)">
+    KNOWLEDGE ENGINE
+  </text>
+
+  <text x="450" y="805" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="22"
+        letter-spacing="9"
+        fill="#ffffff">
+    ORGANIZE. CONNECT. INFER. EVOLVE.
+  </text>
+
+  <!-- Bottom pulse -->
+  <circle cx="450" cy="830" r="5" fill="#ffc83d" filter="url(#strongGlow)">
+    <animate attributeName="r" values="5;13;5" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
   </circle>
 </svg>
